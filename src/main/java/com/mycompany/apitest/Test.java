@@ -4,7 +4,6 @@
  */
 package com.mycompany.apitest;
 
-import jakarta.persistence.criteria.Path;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
@@ -13,17 +12,9 @@ import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.xpath.XPath;
@@ -38,7 +29,7 @@ import static utilities.UrlEncoder.urlEncoder;
 import utilities.XmlParse;
 import static utilities.base64.base64Encoder;
 import utilities.xmlsigner;
-import org.apache.commons.io.IOUtils; 
+
 
 /**
  *
