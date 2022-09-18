@@ -3,6 +3,7 @@
     <servlet>
         <servlet-name>Test</servlet-name>
         <servlet-class>com.mycompany.apitest.Test</servlet-class>
+          <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>Test</servlet-name>
