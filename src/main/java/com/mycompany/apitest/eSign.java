@@ -90,10 +90,10 @@ public class eSign extends HttpServlet {
 
 
 
-File file = new File("resource\\Test-Class3DocumentSigner2014.pfx");
+File filepath = new File("resource\\Test-Class3DocumentSigner2014.pfx");
 
-String givenPath = file.getPath();
-String absPath = file.getAbsolutePath();
+String givenPath = filepath.getPath();
+String absPath = filepath.getAbsolutePath();
 
    
 
