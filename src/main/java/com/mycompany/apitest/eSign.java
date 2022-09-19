@@ -92,21 +92,16 @@ public class eSign extends HttpServlet {
 
 
 
-    Path path = Paths.get("resource\\Test-Class3DocumentSigner2014.pfx"); 
+File file = new File("resource\\Test-Class3DocumentSigner2014.pfx");
+
+String givenPath = file.getPath();
+String absPath = file.getAbsolutePath();
+
+   
 
   
 
-        // call toAbsolutePath() to get 
 
-        // absolute path 
-
-        Path absPath= path.toAbsolutePath(); 
-
-  
-
-        // print absolute path 
-
-        System.out.println("Absolute Path: " + absPath); 
 
 
 
