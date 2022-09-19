@@ -81,7 +81,29 @@ public class eSign extends HttpServlet {
             for (int i = 0; i < password.length(); i++) {
                 ch[i] = password.charAt(i);
             }
-            xmlsigner xs = new xmlsigner(Settings.pfx, ch, "1");
+
+
+
+
+    Path path = Paths.get("resource\\Test-Class3DocumentSigner2014.pfx"); 
+
+  
+
+        // call toAbsolutePath() to get 
+
+        // absolute path 
+
+        Path absPath= path.toAbsolutePath(); 
+
+  
+
+        // print absolute path 
+
+        System.out.println("Absolute Path: " + absPath); 
+
+
+
+            xmlsigner xs = new xmlsigner(absPath, ch, "1");
             String signedXML = xs.signXML(req, true);
 
             String final_req = obj.urlEncoder(signedXML);
