@@ -5,7 +5,6 @@
  */
 package com.mycompany.apitest;
 
-import jakarta.servlet.annotation.MultipartConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
@@ -16,7 +15,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
 import org.joda.time.DateTime;
