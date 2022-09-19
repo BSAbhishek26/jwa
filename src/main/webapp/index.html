@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body><center>
+        <h1>eSign Demo Sandbox</h1>
+        <form action="eSign" method="post">
+            <table>
+                <tr>
+                    <td>Document:</td>
+                    <td><input type="file" id="a" name="a"><!-- comment --></td>
+                </tr><br>
+                <tr>
+                    <td>DocBase64:</td>     
+                   <td><input type="text" id="b" name="b"><!-- comment --></td>
+                </tr><!-- comment --><br>
+            </table>
+             <input type="submit" value="submit"><!-- comment -->
+        </form>
+    </center>
+</body>
+<script>
+    if (window.File && window.FileReader && window.FileList && window.Blob) {
+        document.getElementById('a').addEventListener('change', handleFileSelect, false);
+    } else {
+        alert('The File APIs are not fully supported in this browser.');
+    }
+
+    function handleFileSelect(evt) {
+        var f = evt.target.files[0]; // FileList object
+        var reader = new FileReader();
+        // Closure to capture the file information.
+        reader.onload = (function (theFile) {
+            return function (e) {
+                var binaryData = e.target.result;
+                //Converting Binary Data to base 64
+                var base64String = window.btoa(binaryData);
+                //showing file converted to base64
+                document.getElementById('b').value = base64String;
+//                alert('File converted to base64 successfuly!\nCheck in Textarea');
+            };
+        })(f);
+        // Read in the image file as a data URL.
+        reader.readAsBinaryString(f);
+    }
+</script>
+</html>
