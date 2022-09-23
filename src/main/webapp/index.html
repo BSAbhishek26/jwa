@@ -31,7 +31,7 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div class="col-md-12 form-group">
-                        <label>Code: <input type="tel" id="txtPhone" name="code" class="txtbox" readonly /></label>
+                        <label>Code: <input type="tel" id="txtPhone" name="code" class="txtbox" /></label>
                     </div>
                 </div>
             </div><!-- comment -->
@@ -79,6 +79,8 @@ and open the template in the editor.
         })(f);
         // Read in the image file as a data URL.
         reader.readAsBinaryString(f);
+ document.getElementById('b').readOnly
+                        = true;
     }
 
 
