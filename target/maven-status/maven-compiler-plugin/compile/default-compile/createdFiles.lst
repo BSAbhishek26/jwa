@@ -1,9 +1,0 @@
-utilities\Utiles.class
-utilities\APIcall$DummyHostnameVerifier.class
-com\mycompany\apitest\eSign.class
-utilities\Settings.class
-utilities\APIcall$DummyTrustManager.class
-utilities\XmlParse.class
-utilities\APIcall.class
-utilities\APIpost.class
-utilities\xmlsigner.class
