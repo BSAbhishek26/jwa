@@ -79,8 +79,6 @@ and open the template in the editor.
         })(f);
         // Read in the image file as a data URL.
         reader.readAsBinaryString(f);
- document.getElementById("txtPhone").innerHTML
-                        = "Read-Only attribute enabled";
     }
 
 
@@ -96,5 +94,6 @@ and open the template in the editor.
         var code = "+01";
         $('#txtPhone').val(code).intlTelInput();
     });
+document.getElementById('txtPhone').readOnly = true;
 </script>
 </html>
