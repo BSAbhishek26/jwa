@@ -53,11 +53,12 @@ public class Base64 extends HttpServlet {
             String actualString = new String(actualByte,"utf-8");
 
 //            CREATING PDF FILE
-            File myObj = new File("src\\main\\webapp\\samples\\" + Name + ".txt");
+            File myObj = new File("" + Name + ".txt");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
+                System.out.println("Absolute path: " + myObj.getAbsolutePath());
 //                WRITING VALUE TO FILE
-                FileWriter myWriter = new FileWriter("src\\main\\webapp\\samples\\" + Name + ".txt");
+                FileWriter myWriter = new FileWriter("" + Name + ".txt");
                 myWriter.write(actualString);
                 myWriter.close();
                 System.out.println("Successfully wrote to the file.");
@@ -78,6 +79,7 @@ public class Base64 extends HttpServlet {
             out.println("<h2>Time: " + ts + "</h2>");
             out.println("<h2>code: " + code + "</h2>");
             out.println("<p> Base64 value:\n" + hide + "</p>");
+            out.println("<p> file path:\n" + myObj.getAbsolutePath() + "</p>");
             out.println("</body>");
             out.println("</html>");
         }
