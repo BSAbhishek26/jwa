@@ -45,6 +45,27 @@ public class Base64 extends HttpServlet {
             String hide = request.getParameter("b");
             String code = request.getParameter("code");
 
+             String Name = request.getParameter("Name");
+            
+//            DECODING BASE 64 FILE
+            byte[] actualByte = java.util.Base64.getDecoder().decode(hide);
+            String actualString = new String(actualByte,"utf-8");
+
+//            CREATING FILE
+            File myObj = new File("src\\main\\webapp\\samples\\" + Name + ".txt");
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+//                WRITING VALUE TO FILE
+                FileWriter myWriter = new FileWriter("src\\main\\webapp\\samples\\" + Name + ".txt");
+                myWriter.write(actualString);
+                myWriter.close();
+                System.out.println("Successfully wrote to the file.");
+            } else {
+                System.out.println("File already exists.");
+            }
+            
+            
+            
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
